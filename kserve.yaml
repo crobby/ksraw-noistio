@@ -15018,7 +15018,7 @@ metadata:
     control-plane: kserve-controller-manager
     controller-tools.k8s.io: "1.0"
   annotations:
-    service.beta.openshift.io/serving-cert-secret-name: kserve-webhook-server-cert
+    service.beta.openshift.io/serving-cert-secret-name: kserve-controller-cert
   name: kserve-controller-manager-service
   namespace: kserve
 spec:
@@ -15050,7 +15050,6 @@ metadata:
   labels:
     control-plane: kserve-controller-manager
     controller-tools.k8s.io: "1.0"
-    service.beta.openshift.io/serving-cert-secret-name: kserve-webhook-server-cert
   name: kserve-controller-manager
   namespace: kserve
 spec:
@@ -15064,7 +15063,6 @@ spec:
       labels:
         control-plane: kserve-controller-manager
         controller-tools.k8s.io: "1.0"
-        service.beta.openshift.io/serving-cert-secret-name: kserve-webhook-server-cert
     spec:
       containers:
       - args:
